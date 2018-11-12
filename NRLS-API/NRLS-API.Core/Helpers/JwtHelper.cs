@@ -51,12 +51,12 @@ namespace NRLS_API.Core.Helpers
                 return new Response("The JWT associated with the Authorisation header must have the 3 sections");
             }
 
-            var signature = claimsHashItems.Skip(2).Take(1).FirstOrDefault();
+            //var signature = claimsHashItems.Skip(2).Take(1).FirstOrDefault();
 
-            if (!string.IsNullOrEmpty(signature))
-            {
-                return new Response("The JWT associated with the Authorisation header must have the 3 sections");
-            }
+            //if (!string.IsNullOrEmpty(signature))
+            //{
+            //    return new Response("The JWT associated with the Authorisation header must have the 3 sections");
+            //}
 
             var claimsHash = claimsHashItems.Skip(1).Take(1).FirstOrDefault();
 

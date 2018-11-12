@@ -47,7 +47,7 @@ namespace NRLS_API.Core.Helpers
 
             var coding = concept.Coding.ElementAt(0);
 
-            if(systemRequired && (string.IsNullOrEmpty(coding.System) || !coding.System.Equals(validSystem)))
+            if(systemRequired && (string.IsNullOrEmpty(coding.System) || (!string.IsNullOrEmpty(validSystem) && !coding.System.Equals(validSystem))))
             {
                 return false;
             }

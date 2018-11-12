@@ -59,7 +59,7 @@ namespace NRLS_API.Services
             {
                 return OperationOutcomeFactory.CreateInvalidResource(null);
             }
-            else if(!_validationHelper.ValidCodableConcept(pointer.Type, FhirConstants.SystemPointerType, true, true, true, true, FhirConstants.VsRecordType))
+            else if(!_validationHelper.ValidCodableConcept(pointer.Type, null, false, true, true, true, FhirConstants.VsRecordType))
             {
                 return OperationOutcomeFactory.CreateInvalidResource("type");
             }
